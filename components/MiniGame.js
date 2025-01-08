@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import generateClassNames from '../utils/generateClassNames';
 
 const MiniGame = () => {
   const [miniGames, setMiniGames] = useState([]);
@@ -18,18 +19,18 @@ const MiniGame = () => {
   }, []);
 
   return (
-    <div>
-      <h2>Mini-Learning-Games</h2>
+    <div className={generateClassNames('container', { 'bg-gray-100': true })}>
+      <h2 className={generateClassNames('text-2xl font-bold', { 'text-gray-800': true })}>Mini-Learning-Games</h2>
       {miniGames.length > 0 ? (
         miniGames.map((game) => (
-          <div key={game.gameId}>
-            <h3>{game.title}</h3>
-            <p>{game.description}</p>
+          <div key={game.gameId} className={generateClassNames('p-4 mb-4 border rounded', { 'border-gray-300': true })}>
+            <h3 className={generateClassNames('text-xl font-semibold', { 'text-gray-700': true })}>{game.title}</h3>
+            <p className={generateClassNames('text-gray-600', { 'text-sm': true })}>{game.description}</p>
             {/* Render game data here */}
           </div>
         ))
       ) : (
-        <p>No mini-learning-games available.</p>
+        <p className={generateClassNames('text-gray-500', { 'text-sm': true })}>No mini-learning-games available.</p>
       )}
     </div>
   );

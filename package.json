@@ -1,0 +1,21 @@
+{
+  "name": "pwa-mvp",
+  "version": "1.0.0",
+  "description": "An e-learning platform built with Next.js, React, and MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^10.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "tailwindcss": "^2.0.0",
+    "postcss": "^8.0.0",
+    "autoprefixer": "^10.0.0"
+  },
+  "author": "carlxaeron",
+  "license": "MIT"
+}
