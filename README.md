@@ -191,4 +191,28 @@ To dynamically generate Tailwind CSS classes, you can use JavaScript to create c
 
 2. Use the utility function in your components to apply the generated class names to elements.
 
-For example, you can create a utility function in a new file, `utils/generateClassNames.js`, and use it in your components like `components/MiniGame.js` and `components/Quiz.js`.
+For example, you can create a utility function in a new file, `utils/generateClassNames.js`, and use it in your components like `components/miniGames/MiniGame.js` and `components/quizzes/Quiz.js`.
+
+## Directory Structure
+
+The project directory structure is organized as follows:
+
+* `api/` - This directory contains the API route handlers. For example, `api/miniGames.js` and `api/quizzes.js`.
+* `components/` - This directory contains reusable React components. For example, `components/miniGames/MiniGame.js` and `components/quizzes/Quiz.js`.
+  * `components/miniGames/` - This subdirectory contains components related to mini-games.
+  * `components/quizzes/` - This subdirectory contains components related to quizzes.
+  * `components/common/` - This subdirectory contains shared or reusable components used across different parts of the application.
+* `pages/` - This directory contains the Next.js pages. For example, `pages/_app.js`, `pages/admin/index.js`, `pages/api/miniGames.js`, `pages/api/quizzes.js`, and `pages/index.js`.
+* `styles/` - This directory contains global and component-specific styles. For example, `styles/global.css`.
+* `utils/` - This directory contains utility functions. For example, `utils/generateClassNames.js`.
+* `public/` - This directory contains static assets such as images, icons, and other files that need to be served directly.
+* `README.md` - This file contains the project description, setup instructions, and other relevant information.
+* `package.json` - This file contains the project metadata and dependencies.
+* `postcss.config.js` - This file contains the PostCSS configuration.
+* `tailwind.config.js` - This file contains the Tailwind CSS configuration.
+* `.env.local.example` - This file contains example environment variables to help new developers set up their local environment.
+* `.gitignore` - This file specifies which files and directories should be ignored by Git.
+* `next.config.js` - This file customizes the Next.js configuration, such as setting up custom webpack configurations, environment variables, and other Next.js-specific settings.
+* `babel.config.js` - This file contains the Babel configuration with presets and plugins.
+* `eslint.json` - This file contains the ESLint configuration to enforce code quality and consistency across the project.
+* `prettier.config.js` - This file contains the Prettier configuration to ensure consistent code formatting across the project.
